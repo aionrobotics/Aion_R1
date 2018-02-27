@@ -1,0 +1,56 @@
+Jetson IP: 192.168.1.103
+User: nvidia
+Pass: nvidia
+
+Note: I noticed Jims install script was very basic. It installed ROS-Base, rather than "Desktop_Install" which is what typically goes on the robot and includes libraries I'm rather certain we'll need. Given the limited space available I let it as is for now. (TX2 has more than tx1, so might not be an issue)
+
+"Desktop-full-Install" usually goes on the host machine. 
+
+
+What I did:
+Updated apt repositories with:
+sudo apt-add-repository universe
+sudo apt-add-repository multiverse
+sudo apt-get update
+
+Changed hostname in /etc/hostname and /etc/hosts AionR1 to
+
+sudo apt-get install bash-completion command-not-found htop nano
+
+sudo apt-get install ros-kinetic-navigation ros-kinetic-xacro ros-kinetic-robot-state-publisher ros-kinetic-joint-state-controller ros-kinetic-diff-drive-controller ros-kinetic-robot-localization ros-kinetic-twist-mux ros-kinetic-interactive-marker-twist-server ros-kinetic-opencv-apps ros-kinetic-gazebo-ros ros-kinetic-gmapping ros-kinetic-joy ros-kinetic-diagnostic-aggregator ros-kinetic-teleop-twist-joy ros-kinetic-image-transport ros-kinetic-joint-trajectory-controller ros-kinetic-joint-limits-interface ros-kinetic-controller-manager ros-kinetic-razor-imu-9dof ros-kinetic-imu-transformer  ros-kinetic-serial
+
+sudo apt-get install libpcl1
+
+sudo apt-get install libopencv-videostab2.4v5
+
+sudo apt-get install joystick
+
+sudo apt-get install libncurses-dev
+
+Created Catkin workspace using jetsonhacks scripts
+installROSTX2/setupCatkinWorkspace.sh 
+
+Downloaded source codes into the catkin workspace
+
+
+Install ZED Drivers, Zed SDK
+ 
+clone into catkin_ws/src
+git clone https://github.com/rbonghi/panther.git
+git clone https://github.com/stereolabs/zed-ros-wrapper.git
+git clone https://github.com/rbonghi/roboteq_control.git
+git clone https://github.com/sonyccd/roboclaw_ros.git
+
+
+Ran into an error when trying to install the ZED SDK
+Checking CUDA version...
+ERROR : the installer failed to detect the CUDA version (CUDA 9.0 required), make sure it's installed
+The ZED SDK will NOT work without CUDA, Continue  (Y/N) ? 
+
+And cant test roboclaw, as it doesnt seem to be connected.
+
+
+
+
+
+
