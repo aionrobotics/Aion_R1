@@ -20,6 +20,4 @@ The following topics are also published for use within more advanced projects:
 ```
 
 
-## Usage Instructions [{HERE}](http://docs.aionrobotics.com/en/latest/ros-getting-started.html)
-
-## Setup Instructions [{HERE}](http://docs.aionrobotics.com/en/latest/ros-robot-configuration.html)
+## User Guide [{HERE}](http://docs.aionrobotics.com/en/latest/r1-user-guides.html)
