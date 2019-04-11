@@ -1,3 +1,6 @@
+```diff
+- # This package has been deprecated, please use aion_io instead
+```
 # Aion Robotics - r1_control pkg
 
 <img src="https://cdn.shopify.com/s/files/1/1759/4103/products/Aion-Robotics-R1-Gravel-Anamorphic-Flare-Front-25_1024x1024@2x.jpg?v=1516468791" width="400">
